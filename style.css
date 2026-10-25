@@ -189,8 +189,8 @@ section.dark h2 { color: var(--white); }
 section.dark h2::before { background: var(--mint); }
 .president { display: grid; grid-template-columns: 1fr 1.6fr; gap: 56px; align-items: start; }
 .portrait { margin: 0; position: sticky; top: 100px; }
-/* Portrait en arche : haut très arrondi */
-.portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 40% 30%; border-radius: 200px 200px 24px 24px; display: block; }
+/* Portrait en rectangle aux coins arrondis */
+.portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 40% 30%; border-radius: 24px; display: block; }
 .message p { max-width: 66ch; }
 .message .signature { margin-top: 1.6em; color: #bfe0cf; }
 .message .signature strong { color: var(--white); font-family: var(--font-title); }
