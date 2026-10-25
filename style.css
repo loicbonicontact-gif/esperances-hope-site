@@ -215,7 +215,7 @@ section.dark h2::before { background: var(--mint); }
 @media (max-width: 600px) { .gallery { grid-template-columns: 1fr; } }
 
 /* ---------- Vidéo de témoignages ---------- */
-.video { margin: 28px 0 0; max-width: 848px; }
+.video { margin: 28px auto 0; max-width: 848px; }
 .video video { width: 100%; height: auto; aspect-ratio: 848 / 480; background: var(--slate); border-radius: var(--radius); display: block; box-shadow: var(--shadow); }
 .video figcaption { color: var(--muted); font-size: .95rem; margin-top: 8px; }
 
