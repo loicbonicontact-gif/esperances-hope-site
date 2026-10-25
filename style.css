@@ -253,3 +253,9 @@ footer .disclaimer { margin: 40px 0 0; padding-top: 22px; border-top: 1px solid 
   .js .reveal { opacity: 1; transform: none; }
   .btn:hover, .gallery figure:hover img { transform: none; }
 }
+
+/* ---------- Témoignages : titre, texte et vidéo centrés ---------- */
+#temoignages .wrap { text-align: center; }
+#temoignages h2::before { margin-left: auto; margin-right: auto; }
+#temoignages .intro { margin-left: auto; margin-right: auto; }
+#temoignages .video { margin-left: auto; margin-right: auto; max-width: 960px; }
