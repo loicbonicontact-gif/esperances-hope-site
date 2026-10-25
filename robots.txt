@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xn--espranceshope-dhb.com/sitemap.xml
