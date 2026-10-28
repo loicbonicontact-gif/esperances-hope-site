@@ -10,4 +10,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://xn--espranceshope-dhb.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://xn--espranceshope-dhb.com/en/"/>
   </url>
+  <url>
+    <loc>https://xn--espranceshope-dhb.com/mentions-legales/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xn--espranceshope-dhb.com/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xn--espranceshope-dhb.com/en/legal/"/>
+  </url>
+  <url>
+    <loc>https://xn--espranceshope-dhb.com/en/legal/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xn--espranceshope-dhb.com/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xn--espranceshope-dhb.com/en/legal/"/>
+  </url>
 </urlset>
