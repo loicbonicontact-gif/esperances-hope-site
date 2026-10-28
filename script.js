@@ -35,6 +35,45 @@ if ('IntersectionObserver' in window) {
   blocs.forEach(function (bloc) { bloc.classList.add('visible'); });
 }
 
+// 3) Formulaire de contact : envoi sans quitter la page, et objet du message selon la catégorie
+var formulaire = document.getElementById('formulaire-contact');
+if (formulaire) {
+  var objet = formulaire.querySelector('[name=_subject]');
+  var statut = document.getElementById('form-statut');
+  var bouton = formulaire.querySelector('button[type=submit]');
+
+  // Quand on choisit une catégorie, elle apparaît dans l'objet de l'e-mail reçu
+  formulaire.addEventListener('change', function (e) {
+    if (e.target.name === 'categorie') {
+      objet.value = '[Site] ' + e.target.value + ' - nouveau message';
+    }
+  });
+
+  formulaire.addEventListener('submit', function (e) {
+    // Vieux navigateur : on laisse l'envoi classique se faire
+    if (!window.fetch || !window.FormData) { return; }
+    e.preventDefault();
+    bouton.disabled = true;
+    statut.className = 'statut';
+    statut.textContent = '…';
+    fetch(formulaire.action, {
+      method: 'POST',
+      body: new FormData(formulaire),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (reponse) {
+      if (!reponse.ok) { throw new Error('envoi refusé'); }
+      formulaire.reset();
+      statut.className = 'statut ok';
+      statut.textContent = formulaire.getAttribute('data-ok');
+    }).catch(function () {
+      statut.className = 'statut erreur';
+      statut.textContent = formulaire.getAttribute('data-erreur');
+    }).then(function () {
+      bouton.disabled = false;
+    });
+  });
+}
+
 // 4) Visionneuse de photos : toucher une photo de la galerie l'ouvre en grand
 var photos = document.querySelectorAll('.gallery figure img');
 if (photos.length) {
