@@ -285,10 +285,11 @@ section h2::before { display: none; }
 .btn:hover { transform: none; box-shadow: none; }
 .js .reveal { opacity: 1; transform: none; transition: none; }
 
-/* Missions : une simple liste */
-.steps { display: block; max-width: 760px; margin-top: 28px; }
-.step, section:not(.alt) .step { background: none; border: 0; border-top: 1px solid var(--rule); border-radius: 0; box-shadow: none; padding: 20px 0; }
-.step h3 { margin-bottom: .25em; }
+/* Missions : trois cartes, sans numéros ni icônes */
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; max-width: none; margin-top: 32px; }
+.step, section:not(.alt) .step { background: var(--bg); border: 1px solid var(--rule); border-top: 4px solid var(--green-bright); border-radius: 12px; box-shadow: 0 1px 3px rgba(18, 55, 43, .10); padding: 26px 28px; }
+.step h3 { margin-bottom: .4em; }
+@media (max-width: 800px) { .steps { grid-template-columns: 1fr; margin-top: 24px; } }
 
 /* Actions : quatre cartes, deux par ligne */
 .events { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: none; }
