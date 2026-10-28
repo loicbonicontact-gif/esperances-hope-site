@@ -332,3 +332,14 @@ section.pres .message .signature strong { color: var(--deep); }
 @media (max-width: 800px) {
   section.pres .president { padding: 24px 20px; gap: 24px; }
 }
+
+/* Présidente : réglage de la mise en page (titre visible, texte moins grand, portrait plus petit) */
+html { scroll-padding-top: 120px; }
+section.pres .president { grid-template-columns: 300px 1fr; gap: 40px; align-items: start; }
+section.pres .portrait { top: 120px; }
+section.pres .portrait img { aspect-ratio: 4 / 5; }
+section.pres .message p { font-size: 1.05rem; line-height: 1.7; max-width: 62ch; }
+@media (max-width: 800px) {
+  section.pres .president { grid-template-columns: 1fr; }
+  section.pres .portrait { max-width: 260px; }
+}
