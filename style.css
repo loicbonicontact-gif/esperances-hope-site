@@ -323,3 +323,12 @@ body.lb-lock { overflow: hidden; }
   .lb-prev { left: 16px; }
   .lb-next { right: 16px; }
 }
+
+/* Mot de la Présidente : carte claire (remplace l'ancien fond vert foncé) */
+#presidente .president { background: var(--white); border: 1px solid var(--rule); border-top: 4px solid var(--green-bright); border-radius: 12px; box-shadow: 0 1px 3px rgba(18, 55, 43, .10); padding: 40px; gap: 48px; }
+#presidente .message p { color: var(--ink); line-height: 1.75; }
+#presidente .message .signature { margin-top: 1.6em; padding-top: 1.2em; border-top: 1px solid var(--rule); color: var(--muted); }
+#presidente .message .signature strong { color: var(--deep); }
+@media (max-width: 800px) {
+  #presidente .president { padding: 24px 20px; gap: 24px; }
+}
