@@ -30,104 +30,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&family=Noto+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
-  <link rel="stylesheet" href="../style.css?v=20261028k">
+  <link rel="stylesheet" href="/style.css?v=20261028r">
   <script>document.documentElement.className += ' js';</script>
 </head>
 <body>
-
-<a class="skip" href="#contenu">Aller au contenu</a>
-
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="../" aria-label="Espérance's Hope, accueil">
-      <img class="logo" src="../images/logo.png" width="164" height="146" alt="" decoding="async">
-      <span class="brand-name">Espérance's <span>Hope</span></span>
-    </a>
-    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-    </button>
-    <nav id="menu" aria-label="Navigation principale">
-      <a href="../#presidente">La Présidente</a>
-      <a href="../#mission">Notre mission</a>
-      <a href="../#agir">Nos actions</a>
-      <a class="nav-cta" href="./" aria-current="page">Contact</a>
-      <a class="lang" href="../en/contact/" hreflang="en" lang="en">English</a>
-    </nav>
-  </div>
-</header>
-
-<main id="contenu">
-  <section class="page-head">
-    <div class="wrap">
-      <p class="eyebrow">Contact</p>
-      <h1>Nous contacter</h1>
-      <p class="lead">Choisissez le sujet de votre message : il est transmis à l'équipe de l'association.</p>
-    </div>
-  </section>
-
-  <section class="form-section">
-    <div class="wrap contact-grid">
-      <form id="formulaire-contact" class="form" action="https://formspree.io/f/xeaakadd" method="POST" data-ok="Merci, votre message a bien été envoyé. L'association vous répondra dès que possible." data-erreur="L'envoi n'a pas fonctionné. Vous pouvez écrire directement à esperancehope.assoc@yahoo.com.">
-        <fieldset>
-          <legend>Votre message concerne&nbsp;:</legend>
-          <div class="choices">
-          <label class="choice"><input type="radio" name="categorie" value="Donateur" required><span><strong>Donateur</strong><small>Je souhaite soutenir ou aider l'association</small></span></label>
-          <label class="choice"><input type="radio" name="categorie" value="Malade ou famille" required><span><strong>Malade ou famille</strong><small>Je cherche de l'aide pour un enfant</small></span></label>
-          <label class="choice"><input type="radio" name="categorie" value="Information" required><span><strong>Information</strong><small>Je souhaite en savoir plus</small></span></label>
-          <label class="choice"><input type="radio" name="categorie" value="Autre" required><span><strong>Autre</strong><small>Un autre sujet</small></span></label>
-          </div>
-        </fieldset>
-        <input type="hidden" name="_subject" value="[Site] Nouveau message">
-        <p class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
-        <div class="field"><label for="nom">Nom et prénom</label><input id="nom" name="nom" type="text" autocomplete="name" required></div>
-        <div class="field"><label for="email">Adresse e-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="tel">Téléphone <span class="opt">(facultatif)</span></label><input id="tel" name="telephone" type="tel" autocomplete="tel"></div>
-        <div class="field"><label for="message">Votre message</label><textarea id="message" name="message" rows="6" required></textarea></div>
-        <p class="form-notice">N'indiquez pas de détails médicaux dans ce formulaire. Il ne s'agit pas d'un service d'urgence : en cas d'urgence médicale, rendez-vous dans un centre de santé.</p>
-        <label class="consent"><input type="checkbox" name="consentement" value="oui" required><span>J'accepte que ces informations soient transmises à l'association pour répondre à ma demande. Elles ne sont pas publiées.</span></label>
-        <button class="btn" type="submit">Envoyer le message</button>
-        <p id="form-statut" class="statut" role="status" aria-live="polite"></p>
-      </form>
-      <aside class="contact-side" aria-label="Autres moyens de contact">
-        <h2>Autres moyens</h2>
-        <p>Vous pouvez aussi écrire directement par e-mail&nbsp;:</p>
-        <p><a href="mailto:esperancehope.assoc@yahoo.com">esperancehope.assoc@yahoo.com</a></p>
-        <p class="small">Service de neurochirurgie,<br>CHU de Yopougon (Côte d'Ivoire)</p>
-      </aside>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a class="foot-logo" href="../" aria-label="Espérance's Hope"><img src="../images/logo.png" width="164" height="146" alt="" loading="lazy" decoding="async"><span>Espérance's <b>Hope</b></span></a>
-        <p>Association ivoirienne de lutte contre l'hydrocéphalie et les malformations du tube neural.</p>
-        <p class="motto">« Tous être traités et vivre »</p>
-      </div>
-      <nav class="foot-col" aria-label="Pied de page">
-        <h2>Explorer</h2>
-        <ul>
-          <li><a href="../#presidente">La Présidente</a></li>
-          <li><a href="../#hydrocephalie">L'hydrocéphalie</a></li>
-          <li><a href="../#mission">Notre mission</a></li>
-          <li><a href="../#agir">Nos actions</a></li>
-          <li><a href="./">Contact</a></li>
-          <li><a href="../en/contact/" hreflang="en" lang="en">English</a></li>
-        </ul>
-      </nav>
-      <div class="foot-col contact">
-        <h2>Contact</h2>
-        <p>Service de neurochirurgie,<br>CHU de Yopougon (Côte d'Ivoire)</p>
-        <p><a href="mailto:esperancehope.assoc@yahoo.com">esperancehope.assoc@yahoo.com</a></p>
-        <p class="domain">espéranceshope.com</p>
-      </div>
-    </div>
-    <p class="copyright">© 2026 Espérance's Hope · <a href="../mentions-legales/">Mentions légales</a></p>
-  </div>
-</footer>
-
-<script src="../script.js"></script>
+<div id="root" data-page="contact-fr"><a class="skip" href="#contenu">Aller au contenu</a><header class="top"><div class="wrap"><a class="brand" href="/#accueil" aria-label="Espérance&#x27;s Hope, accueil"><img class="logo" src="/images/logo.png" width="164" height="146" alt="" decoding="async"/><span class="brand-name">Espérance&#x27;s <span>Hope</span></span></a><button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button><nav id="menu" aria-label="Navigation principale"><a href="/#presidente">La Présidente</a><a href="/#mission">Notre mission</a><a href="/#agir">Nos actions</a><a class="nav-cta" href="/contact/">Contact</a><a class="lang" href="/en/contact/" hrefLang="en" lang="en">English</a></nav></div></header><main id="contenu"><section class="page-head"><div class="wrap"><p class="eyebrow">Contact</p><h1>Nous contacter</h1><p class="lead">Choisissez le sujet de votre message : il est transmis à l&#x27;équipe de l&#x27;association.</p></div></section><section class="form-section"><div class="wrap contact-grid"><form id="formulaire-contact" class="form" action="https://formspree.io/f/xeaakadd" method="POST"><fieldset><legend>Votre message concerne :</legend><div class="choices"><label class="choice"><input type="radio" name="categorie" required="" value="Donateur"/><span><strong>Donateur</strong><small>Je souhaite soutenir ou aider l&#x27;association</small></span></label><label class="choice"><input type="radio" name="categorie" required="" value="Malade ou famille"/><span><strong>Malade ou famille</strong><small>Je cherche de l&#x27;aide pour un enfant</small></span></label><label class="choice"><input type="radio" name="categorie" required="" value="Information"/><span><strong>Information</strong><small>Je souhaite en savoir plus</small></span></label><label class="choice"><input type="radio" name="categorie" required="" value="Autre"/><span><strong>Autre</strong><small>Un autre sujet</small></span></label></div></fieldset><input type="hidden" name="_subject" value="[Site] Nouveau message"/><p class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="_gotcha" tabindex="-1" autoComplete="off"/></label></p><div class="field"><label for="nom">Nom et prénom</label><input id="nom" name="nom" type="text" autoComplete="name" required=""/></div><div class="field"><label for="email">Adresse e-mail</label><input id="email" name="email" type="email" autoComplete="email" required=""/></div><div class="field"><label for="tel">Téléphone <span class="opt">(facultatif)</span></label><input id="tel" name="telephone" type="tel" autoComplete="tel"/></div><div class="field"><label for="message">Votre message</label><textarea id="message" name="message" rows="6" required=""></textarea></div><p class="form-notice">N&#x27;indiquez pas de détails médicaux dans ce formulaire. Il ne s&#x27;agit pas d&#x27;un service d&#x27;urgence : en cas d&#x27;urgence médicale, rendez-vous dans un centre de santé.</p><label class="consent"><input type="checkbox" name="consentement" required="" value="oui"/><span>J&#x27;accepte que ces informations soient transmises à l&#x27;association pour répondre à ma demande. Elles ne sont pas publiées.</span></label><button class="btn" type="submit">Envoyer le message</button><p id="form-statut" class="statut" role="status" aria-live="polite"></p></form><aside class="contact-side" aria-label="Autres moyens de contact"><h2>Autres moyens</h2><p>Vous pouvez aussi écrire directement par e-mail :</p><p><a href="mailto:esperancehope.assoc@yahoo.com">esperancehope.assoc@yahoo.com</a></p><p class="small">Service de neurochirurgie,<br/>CHU de Yopougon (Côte d&#x27;Ivoire)</p></aside></div></section></main><footer><div class="wrap"><div class="foot-grid"><div class="foot-brand"><a class="foot-logo" href="/#accueil" aria-label="Espérance&#x27;s Hope, haut de page"><img src="/images/logo.png" width="164" height="146" alt="" loading="lazy" decoding="async"/><span>Espérance&#x27;s <b>Hope</b></span></a><p>Association ivoirienne de lutte contre l&#x27;hydrocéphalie et les malformations du tube neural.</p><p class="motto">« Tous être traités et vivre »</p></div><nav class="foot-col" aria-label="Pied de page"><h2>Explorer</h2><ul><li><a href="/#presidente">La Présidente</a></li><li><a href="/#hydrocephalie">L&#x27;hydrocéphalie</a></li><li><a href="/#mission">Notre mission</a></li><li><a href="/#agir">Nos actions</a></li><li><a href="/contact/">Contact</a></li><li><a href="/en/contact/" hrefLang="en" lang="en">English</a></li></ul></nav><div class="foot-col contact"><h2>Contact</h2><p>Service de neurochirurgie,<br/>CHU de Yopougon (Côte d&#x27;Ivoire)</p><p><a href="mailto:esperancehope.assoc@yahoo.com">esperancehope.assoc@yahoo.com</a></p><p class="domain">espéranceshope.com</p></div></div><p class="copyright">© 2026 Espérance&#x27;s Hope · <a href="/mentions-legales/">Mentions légales</a></p></div></footer></div>
+<script type="module" src="/assets/main-XFwJZIzj.js"></script>
 </body>
 </html>
