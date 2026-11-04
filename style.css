@@ -481,3 +481,80 @@ nav.open { display: flex; }
 nav a { display: block; padding: 11px 2px; min-height: 52px; border-bottom: 1px solid rgba(255, 255, 255, .18); font-size: 1.05rem; box-sizing: border-box; }
 nav a.lang { margin: 16px 0 0; text-align: center; justify-content: center; }
 nav a.nav-cta { margin: 16px 0 0; text-align: center; justify-content: center; border-bottom: 0; min-height: 48px; padding: 13px 22px; }
+
+/* ============================================================
+   Look « site médical professionnel » (choix « plus riche », 04/11/2026)
+   Remplace le rendu « naturel » : cartes à ombres, icônes, apparitions douces.
+   ============================================================ */
+:root { --radius: 18px; --shadow: 0 10px 30px rgba(18, 55, 43, .08); --shadow-up: 0 16px 36px rgba(18, 55, 43, .16); }
+
+/* Titres : petite barre verte au-dessus */
+section h2::before { display: block; }
+#temoignages h2::before { margin-left: auto; margin-right: auto; }
+.news h2::before, .page-head h1::before { display: none; }
+
+/* Boutons : arrondis, avec un léger soulèvement au survol */
+.btn, nav a.lang { border-radius: 999px; }
+.btn { box-shadow: 0 6px 16px rgba(11, 107, 79, .22); transition: background .2s, transform .2s, box-shadow .2s; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(11, 107, 79, .3); }
+.hero .btn { box-shadow: 0 6px 18px rgba(0, 0, 0, .25); }
+
+/* Accueil : le texte du héros apparaît en douceur, et un trait de pouls (ECG) souligne le bas */
+.hero { position: relative; overflow: hidden; }
+.hero-text > * { animation: rise .8s ease both; }
+.hero-text > :nth-child(2) { animation-delay: .1s; }
+.hero-text > :nth-child(3) { animation-delay: .2s; }
+.hero-text > :nth-child(4) { animation-delay: .3s; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.hero::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 56px; pointer-events: none; opacity: .5;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='56' viewBox='0 0 360 56'%3E%3Cpath d='M0 36h110l12-10 12 10h30l10-26 14 44 12-18h24l10-8 8 8h118' fill='none' stroke='%23bff0d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") repeat-x left bottom / 360px 56px;
+}
+
+/* Bandeau « À la une » sous le héros */
+.news { padding: 0; background: var(--white); border-bottom: 1px solid var(--rule); }
+.news-inner { display: flex; align-items: center; gap: 14px 20px; flex-wrap: wrap; padding-top: 18px; padding-bottom: 18px; }
+.news-tag { background: var(--green); color: var(--white); font-family: var(--font-title); font-weight: 700; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; }
+.news p { margin: 0; flex: 1 1 320px; font-size: 1.05rem; color: var(--ink); }
+.news-link { font-family: var(--font-title); font-weight: 700; color: var(--green); text-decoration: none; border-bottom: 2px solid var(--green-bright); padding: 8px 0; }
+.news-link::after { content: " \2192"; }
+.news-link:hover { color: var(--deep); }
+
+/* Cartes : ombre douce, coins arrondis, soulèvement au survol */
+.step, section:not(.alt) .step, .events li, .day {
+  border-radius: var(--radius); box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease;
+}
+.step:hover, .events li:hover { transform: translateY(-4px); box-shadow: var(--shadow-up); }
+.step, section:not(.alt) .step { padding: 32px 28px; background: var(--white); }
+section.alt .step { background: var(--bg); }
+
+/* Icônes des missions : pastille verte avec trait fin */
+.step .icon {
+  display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; margin-bottom: 18px;
+  border-radius: 50%; color: var(--green); background: linear-gradient(135deg, var(--green-soft), var(--mint));
+}
+.step:hover .icon { background: var(--green); color: var(--white); transition: background .25s, color .25s; }
+
+/* Photos et portrait : cadre plus travaillé */
+.portrait img, .gallery img { border-radius: 14px; }
+.portrait img { box-shadow: var(--shadow); }
+.gallery figure img { transition: transform .35s ease; }
+.gallery figure:hover img { transform: scale(1.03); }
+.video video { border-radius: var(--radius); box-shadow: var(--shadow); }
+
+/* Apparition douce des sections et des cartes (une par une) quand on arrive dessus */
+.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.visible { opacity: 1; transform: none; }
+.js .reveal .step, .js .reveal .events li { opacity: 0; transform: translateY(18px); }
+.js .reveal.visible .step, .js .reveal.visible .events li { opacity: 1; transform: none; transition: opacity .6s ease, transform .6s ease, box-shadow .25s ease; }
+.js .reveal.visible .step:nth-child(2), .js .reveal.visible .events li:nth-child(2) { transition-delay: .12s; }
+.js .reveal.visible .step:nth-child(3), .js .reveal.visible .events li:nth-child(3) { transition-delay: .24s; }
+.js .reveal.visible .events li:nth-child(4) { transition-delay: .36s; }
+.js .reveal.visible .step:hover, .js .reveal.visible .events li:hover { transition-delay: 0s; transform: translateY(-4px); }
+
+/* Moins d'animations si le visiteur le demande (accessibilité) */
+@media (prefers-reduced-motion: reduce) {
+  .hero-text > * { animation: none; }
+  .js .reveal, .js .reveal .step, .js .reveal .events li { opacity: 1; transform: none; transition: none; }
+  .step:hover, .events li:hover, .btn:hover { transform: none; }
+}
