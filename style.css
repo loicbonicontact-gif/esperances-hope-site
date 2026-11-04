@@ -466,3 +466,20 @@ main a, footer a { overflow-wrap: anywhere; }
   .day { padding: 20px 16px; }
   .day .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 }
+
+/* Menu : les mots ne se coupent plus en deux, et le menu se replie en « hamburger » dès 1040 px
+   (avec 5 liens + la langue, la barre est trop étroite en dessous : tablettes, petits écrans d'ordinateur). */
+nav a, .brand-name { white-space: nowrap; }
+@media (max-width: 1040px) {
+  .burger { display: inline-flex; }
+  nav {
+    display: none; position: absolute; left: 0; right: 0; top: 100%;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--deep); border-bottom: 3px solid var(--green-bright);
+    padding: 4px 24px 20px;
+  }
+  nav.open { display: flex; }
+  nav a { display: block; padding: 11px 2px; min-height: 52px; border-bottom: 1px solid rgba(255, 255, 255, .18); font-size: 1.05rem; box-sizing: border-box; }
+  nav a.lang { margin: 16px 0 0; text-align: center; justify-content: center; }
+  nav a.nav-cta { margin: 16px 0 0; text-align: center; justify-content: center; border-bottom: 0; min-height: 48px; padding: 13px 22px; }
+}
