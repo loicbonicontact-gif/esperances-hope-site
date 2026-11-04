@@ -437,3 +437,32 @@ main a, footer a { overflow-wrap: anywhere; }
 .brand img.logo { width: 58px; height: 58px; padding: 6px; background: var(--white); border-radius: 50%; object-fit: contain; box-sizing: border-box; flex: none; }
 .foot-logo img { width: 52px; height: 52px; padding: 5px; background: var(--white); border-radius: 50%; object-fit: contain; box-sizing: border-box; flex: none; }
 @media (max-width: 800px) { .brand img.logo { width: 52px; height: 52px; } }
+
+
+/* Campagne 2026 : programme, affiche et comptes rendus des journées */
+.campaign { padding: 56px 0; }
+.campaign.alt { background: var(--white); border-top: 1px solid var(--rule); }
+.campaign-intro { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.poster-box .gallery { grid-template-columns: 1fr; }
+.poster-box .gallery img { aspect-ratio: auto; }
+.programme { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.programme li { display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.programme strong { font-family: var(--font-title); color: var(--deep); min-width: 9.5rem; }
+.cr-intro { color: var(--muted); max-width: 640px; }
+.days { display: grid; gap: 24px; margin-top: 28px; }
+.day { background: var(--bg); border: 1px solid var(--rule); border-left: 4px solid var(--green-bright); border-radius: var(--radius); padding: 28px; }
+.day:not(.done) { border-left-color: var(--rule); }
+.day-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-bottom: 12px; }
+.day-date { background: var(--green-soft); color: var(--deep); font-family: var(--font-title); font-weight: 700; border-radius: 999px; padding: 4px 16px; }
+.day-head h3 { margin: 0; font-size: 1.4rem; }
+.day .soon { color: var(--muted); margin: 0; font-style: italic; }
+.day-photos h4 { margin: 28px 0 12px; font-size: 1.1rem; color: var(--deep); }
+.day .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.day .gallery img { aspect-ratio: 4 / 3; object-position: center 30%; }
+@media (max-width: 800px) {
+  .campaign { padding: 40px 0; }
+  .campaign-intro { grid-template-columns: 1fr; gap: 24px; }
+  .poster-box { max-width: 420px; }
+  .day { padding: 20px 16px; }
+  .day .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+}

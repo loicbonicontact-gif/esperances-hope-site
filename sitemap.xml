@@ -30,4 +30,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://xn--espranceshope-dhb.com/contact/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://xn--espranceshope-dhb.com/en/contact/"/>
   </url>
+  <url>
+    <loc>https://xn--espranceshope-dhb.com/campagne-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xn--espranceshope-dhb.com/campagne-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xn--espranceshope-dhb.com/en/campaign-2026/"/>
+  </url>
+  <url>
+    <loc>https://xn--espranceshope-dhb.com/en/campaign-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xn--espranceshope-dhb.com/campagne-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xn--espranceshope-dhb.com/en/campaign-2026/"/>
+  </url>
 </urlset>
