@@ -571,3 +571,31 @@ section.alt .step { background: var(--bg); }
 /* Vidéo en format portrait (prise au téléphone) : plus étroite, pour ne pas occuper tout l'écran */
 .video.video-vertical { max-width: 360px; }
 .video.video-vertical video { aspect-ratio: 9 / 16; }
+
+/* Journées repliables de la campagne */
+details.day { padding: 0; }
+details.day > summary { list-style: none; cursor: pointer; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 20px 28px; margin: 0; }
+details.day > summary::-webkit-details-marker { display: none; }
+details.day > summary:hover { background: var(--green-soft); }
+details.day > summary:focus-visible { outline: 3px solid var(--green-bright); outline-offset: -3px; }
+.day-badges { color: var(--muted); font-size: .95rem; }
+.day-toggle { margin-left: auto; color: var(--deep); font-weight: 700; border: 1px solid var(--green-bright); border-radius: 999px; padding: 4px 16px; }
+details.day[open] .day-toggle { display: none; }
+.day-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 28px; padding: 0 28px; align-items: start; }
+.day-body > .day-text { min-width: 0; }
+.day-body > .video { margin: 16px 0 0; max-width: none; }
+.day-body > .video.video-vertical { max-width: 300px; }
+.day-body:not(:has(.video)) { grid-template-columns: minmax(0, 1fr); }
+details.day > .day-photos { padding: 0 28px; }
+details.day > .day-photos:last-child { padding-bottom: 28px; }
+details.day .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+details.press-article > summary { cursor: pointer; font-family: var(--font-title); font-weight: 700; color: var(--deep); padding: 10px 0; }
+details.press-article[open] > summary { margin-bottom: 4px; }
+@media (max-width: 800px) {
+  details.day > summary { padding: 16px 18px; }
+  .day-body { grid-template-columns: minmax(0, 1fr); padding: 0 18px; }
+  .day-body > .video.video-vertical { max-width: 300px; margin-left: auto; margin-right: auto; }
+  details.day > .day-photos { padding: 0 18px; }
+  details.day .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .day-toggle { margin-left: 0; }
+}
