@@ -558,3 +558,7 @@ section.alt .step { background: var(--bg); }
   .js .reveal, .js .reveal .step, .js .reveal .events li { opacity: 1; transform: none; transition: none; }
   .step:hover, .events li:hover, .btn:hover { transform: none; }
 }
+
+/* Lien « dans la presse » : les longs titres passent à la ligne sans déborder */
+.press-link { overflow-wrap: anywhere; }
+.press-link a { font-weight: 600; }
