@@ -562,3 +562,8 @@ section.alt .step { background: var(--bg); }
 /* Lien « dans la presse » : les longs titres passent à la ligne sans déborder */
 .press-link { overflow-wrap: anywhere; }
 .press-link a { font-weight: 600; }
+
+/* Article de presse reproduit dans la carte d'un jour */
+.press-article { background: var(--green-soft); border-left: 4px solid var(--green-bright); border-radius: var(--radius, 18px); padding: 8px 20px 12px; margin: 20px 0; }
+.press-article h4 { margin-top: 12px; }
+.press-credit { font-size: .95rem; color: var(--muted); font-style: italic; }
