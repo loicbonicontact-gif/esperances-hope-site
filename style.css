@@ -569,5 +569,5 @@ section.alt .step { background: var(--bg); }
 .press-credit { font-size: .95rem; color: var(--muted); font-style: italic; }
 
 /* Vidéo en format portrait (prise au téléphone) : plus étroite, pour ne pas occuper tout l'écran */
-.video.portrait { max-width: 360px; }
-.video.portrait video { aspect-ratio: 9 / 16; }
+.video.video-vertical { max-width: 360px; }
+.video.video-vertical video { aspect-ratio: 9 / 16; }
