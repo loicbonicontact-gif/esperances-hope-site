@@ -599,3 +599,6 @@ details.press-article[open] > summary { margin-bottom: 4px; }
   details.day .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .day-toggle { margin-left: 0; }
 }
+/* Vidéo horizontale (Taabo) : pleine largeur sous le texte, bien centrée */
+.day-body:has(.video:not(.video-vertical)) { grid-template-columns: minmax(0, 1fr); }
+.day-body > .video:not(.video-vertical) { max-width: 760px; margin: 8px auto 24px; width: 100%; }
